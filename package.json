@@ -26,11 +26,9 @@
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.2",
-    "del-cli": "^4.0.1",
     "cross-env": "^7.0.3",
+    "del-cli": "^4.0.1",
     "jest": "^27.5.1",
     "supertest": "^6.2.2"
   }
 }
-  
