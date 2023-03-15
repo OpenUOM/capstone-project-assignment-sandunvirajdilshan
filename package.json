@@ -29,6 +29,10 @@
     "del-cli": "^4.0.1",
     "cross-env": "^7.0.3",
     "jest": "^27.5.1",
-    "supertest": "^6.2.2"
+    "supertest": "^6.2.2",
+    "@angular-devkit/build-angular": "^15.2.3"
+  },
+  "resolutions": {
+    "@angular/compiler-cli": "^15.2.3"
   }
 }
