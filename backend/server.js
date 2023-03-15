@@ -27,6 +27,8 @@ app.get("/dbinitialize", async function (req, res) {
   res.end(JSON.stringify(data));
 });
 
+//Teacher
+
 app.get("/listTeachers", async function (req, res) {
   console.log("Request received to list teachers");
   let data = await readTeachers();
@@ -73,6 +75,8 @@ app.post("/getTeacherInfo", async function (req, res) {
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(data));
 });
+
+//Student
 
 app.get("/listStudents", async function (req, res) {
   console.log("Request received to list students");
