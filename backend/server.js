@@ -66,12 +66,15 @@ app.post("/deleteTeacher", async function (req, res) {
   res.end(JSON.stringify(data));
 });
 
-app.post("/editTeacher", async function (req, res) {
-  let reqBody = req.body;
-  let data = await updateTeacher(reqBody.id, reqBody.name, reqBody.age);
-
-  res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify(data));
+app.post('/editTeacher', async (req, res) => {
+  try {
+    const { id, name, age } = req.body;
+    const data = await updateTeacher(id, name, age);
+    res.json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 app.get("/listStudents", async function (req, res) {

@@ -41,8 +41,8 @@ const readTeacherInfo = async (id) => {
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql, [id])
-            .then((teacher) => {
-                resolve(teacher);
+            .then((data) => {
+                resolve(data);
             })
             .catch((error) => {
                 reject(error);
@@ -64,20 +64,6 @@ const addTeacher = async (id, name, age) => {
     });
 }
 
-const updateTeacher = async (name, age, id) => {
-    const sql = `UPDATE teacher SET name=?, age=? WHERE id=?`
-    return new Promise((resolve, reject) => {
-        knex_db
-            .raw(sql, [name, age, id])
-            .then(() => {
-                resolve({status: "Successfully updated Teacher"})
-            })
-            .catch((error) => {
-                reject(error);
-            });
-    });
-}
-
 const deleteTeacher = async (id) => {
     const sql = `DELETE FROM teacher WHERE id = ?`
     return new Promise((resolve, reject) => {
@@ -89,6 +75,20 @@ const deleteTeacher = async (id) => {
             .catch((error) => {
                 reject(error);
             });
+    });
+}
+
+const updateTeacher = async (id, name, age) => {
+    const sql = `UPDATE teachers SET name=?, age=? WHERE id=?`;
+    return new Promise((resolve, reject) => {
+      knex
+        .raw(sql, [name, age, id])
+        .then(() => {
+          resolve({ status: 'Successfully updated Teacher' });
+        })
+        .catch((error) => {
+          reject(error);
+        });
     });
 }
 
@@ -125,8 +125,8 @@ const readStudentInfo = async (id) => {
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql, [id])
-            .then((student) => {
-                resolve(student);
+            .then((data) => {
+                resolve(data);
             })
             .catch((error) => {
                 reject(error);
@@ -172,5 +172,5 @@ module.exports = {
     readStudentInfo,
     readTeacherInfo,
     updateStudent,
-    updateTeacher
+    updateTeacher,
 };
