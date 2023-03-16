@@ -52,13 +52,13 @@ export class TeacherTableComponent implements OnInit {
     });
   }
 
-  getStudentData() {
-    this.selected = 'Students';
-    this.service.getStudentData().subscribe((response) => {
-      this.teacherData = response;
-    }, (error) => {
-      console.log('ERROR - ', error);
-    });
+  deleteTeacher(itemid) {
+    const teacher = {
+      id: itemid
+    }
+    this.service.deleteTeacher(teacher).subscribe((response) => {
+      this.getTeacherData()
+    })
   }
 
   search(value) {
@@ -67,20 +67,11 @@ export class TeacherTableComponent implements OnInit {
       this.getTeacherData();
     } else {
       let b = this.teacherData.filter((teacher) => {
-        if (teacher[0].name.toLowerCase().indexOf(value.toLowerCase()) > -1) {
-          foundItems.push(teacher);
+        if (teacher[0].name.toLowerCase().indexOf(value) > -1) {
+          foundItems.push(teacher)
         }
       });
       this.teacherData = foundItems;
     }
-  }
-
-  deleteTeacher(itemid) {
-    const test = {
-      id: itemid
-    };
-    this.service.deleteTeacher(test).subscribe((response) => {
-      this.getTeacherData();
-    });
   }
 }

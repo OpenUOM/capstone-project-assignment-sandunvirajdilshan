@@ -35,6 +35,14 @@ export class StudentTableComponent implements OnInit {
     this.router.navigate(['editStudent'], navigationExtras)
   }
 
+  initializeDB(){
+    this.service.initializeDB().subscribe((response) => {
+      console.log('DB is Initialized')
+    }, (error) => {
+      console.log('ERROR - ', error)
+    })
+  }
+
   getStudentData() {
     this.selected = 'Students';
     this.service.getStudentData().subscribe((response) => {
@@ -59,7 +67,7 @@ export class StudentTableComponent implements OnInit {
       this.getStudentData();
     } else {
       let b = this.studentData.filter((student) => {
-        if (student[0].name.toLowerCase().indexOf(value.toLowerCase()) > -1) {
+        if (student[0].name.toLowerCase().indexOf(value) > -1) {
           foundItems.push(student)
         }
       });

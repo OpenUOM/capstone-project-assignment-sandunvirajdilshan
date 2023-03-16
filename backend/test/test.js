@@ -9,12 +9,15 @@ beforeAll(async () => {
   await testBase.resetDatabase(db);
 });
 
+
 /**
  * Reset the database after every test case
  */
+
 afterEach(async () => {
   await testBase.resetDatabase(db);
 });
+
 
 describe("Teacher Endpoints", () => {
   it("GET /listTeachers should show all teachers", async () => {

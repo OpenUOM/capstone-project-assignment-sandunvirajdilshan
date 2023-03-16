@@ -22,4 +22,4 @@ describe('AddNewStudentComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+})
