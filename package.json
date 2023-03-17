@@ -20,6 +20,7 @@
     ]
   },
   "dependencies": {
+    "@angular/compiler-cli": "^15.2.3",
     "body-parser": "^1.20.0",
     "express": "^4.17.3",
     "knex": "^2.1.0",
