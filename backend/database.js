@@ -162,6 +162,7 @@ const readStudentInfo = async (id) => {
     });
 }
 
+
 module.exports = {
     readTeachers,
     readStudents,
