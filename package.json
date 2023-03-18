@@ -26,7 +26,7 @@
     "express": "^4.17.3",
     "knex": "^2.1.0",
     "sqlite3": "^5.0.2",
-    "zone.js": "^0.13.0"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.3",
