@@ -24,9 +24,9 @@
     "@angular/core": "^15.2.3",
     "body-parser": "^1.20.0",
     "express": "^4.17.3",
-    "knex": "^0.21.18",
+    "knex": "^2.1.0",
     "sqlite3": "^5.0.2",
-    "zone.js": "^0.11.4"
+    "zone.js": "^0.13.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.3",
@@ -36,4 +36,3 @@
     "supertest": "^6.2.2"
   }
 }
-
