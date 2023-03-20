@@ -5,7 +5,6 @@ fixture`Testing Teacher UI`
     .page`http://localhost:4401/`
 
 test('Testing add teachers', async t => {
-    await t.navigateTo("/dbinitialize");
 
     await t.navigateTo("/addTeacher");
     await t.typeText("#teacher-id", "123456");
@@ -20,4 +19,6 @@ test('Testing add teachers', async t => {
 
     let tdText = await table.find('tr').nth(rowCount - 1).innerText;
     await t.expect(tdText).contains("Mohan Perera");
+
+    await t.click("#teacher-delete-123456");
 });

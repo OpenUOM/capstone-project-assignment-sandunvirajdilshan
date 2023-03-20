@@ -16,7 +16,7 @@ exports.config = {
     browserName: 'chrome'
   },
   directConnect: true,
-  baseUrl: 'http://localhost:4401/',
+  baseUrl: 'http://localhost:/4401',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
