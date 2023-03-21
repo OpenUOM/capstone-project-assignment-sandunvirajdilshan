@@ -1,0 +1,130 @@
+nohup: ignoring input
+
+up to date, audited 1399 packages in 17s
+
+129 packages are looking for funding
+  run `npm fund` for details
+
+21 vulnerabilities (1 low, 8 moderate, 7 high, 5 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+up to date, audited 1399 packages in 4s
+
+129 packages are looking for funding
+  run `npm fund` for details
+
+21 vulnerabilities (1 low, 8 moderate, 7 high, 5 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+TEST DB
+Capstone Project Backend is running on http://localhost:8080
+****************************************************************************************
+This is a simple server for use in testing or debugging Angular applications locally.
+It hasn't been reviewed for security issues.
+
+DON'T USE IT FOR PRODUCTION!
+****************************************************************************************
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browerslist configuration. For more information, see https://angular.io/guide/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+ Running tests in:
+ - Chrome 111.0.5563.64 / Debian 5.2
+
+ Dummy Test
+ ✓ Dummy Test
+
+ Testing Student UI
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size | Estimated Transfer Size
+main.js               | main          | 426.33 kB |               106.08 kB
+polyfills.js          | polyfills     | 164.55 kB |                42.71 kB
+styles.css, styles.js | styles        | 119.94 kB |                29.28 kB
+runtime.js            | runtime       |   1.26 kB |               682 bytes
+
+| Initial Total | 712.08 kB |               178.73 kB
+
+Build at: 2023-03-21T13:56:41.675Z - Hash: 1cf5a65d53cd187b - Time: 15541ms
+
+** Angular Live Development Server is listening on localhost:4401, open your browser on http://localhost:4401/ **
+
+
+✔ Compiled successfully.
+Request received to list teachers
+Request received to add student. Req body: {"id":"999999","name":"Pasindu Basnayaka","age":"45","hometown":"Catholic"}
+Request received to list students
+Request received to delete student. Req body: {"id":999999}
+Request received to list students
+ ✓ Testing add students
+
+ Testing Student UI
+Request received to list students
+Request received to add student. Req body: {"id":"222222","name":"Hiruni Gajanayake","age":"45","hometown":"buddhist"}
+Request received to list students
+Request received to list students
+Request received to delete student. Req body: {"id":222222}
+Request received to list students
+ ✓ Testing delete students
+
+ Testing Student UI
+Request received to list students
+Request received to add student. Req body: {"id":"999999","name":"Pasindu Basnayaka","age":"45","hometown":"catholic"}
+Request received to list students
+Request received to list students
+Request received to get Student Info
+Request received to list students
+Request received to delete student. Req body: {"id":999999}
+Request received to list students
+ ✓ Testing edit students
+
+ Testing Student UI
+Request received to list students
+Request received to list students
+ ✓ Testing search students
+
+ Testing Teacher UI
+Request received to list teachers
+Request received to add teacher. Req body: {"id":"123456","name":"Mohan Perera","age":"45"}
+Request received to list teachers
+Request received to list teachers
+Request received to delete teacher. Req body: {"id":123456}
+Request received to list teachers
+ ✓ Testing add teachers
+
+ Testing Teacher UI
+Request received to list teachers
+Request received to add teacher. Req body: {"id":"300000","name":"Hasitha Fernando","age":"45"}
+Request received to list teachers
+Request received to list teachers
+Request received to delete teacher. Req body: {"id":300000}
+Request received to list teachers
+ ✓ Testing delete teachers
+
+ Testing Teacher UI
+Request received to list teachers
+Request received to get Teacher Info
+Request received to list teachers
+Request received to delete teacher. Req body: {"id":10003}
+Request received to list teachers
+ ✓ Testing edit teachers
+
+ Testing Teacher UI
+Request received to list teachers
+Request received to list teachers
+ ✓ Testing search Teachers
+
+
+ 9 passed (42s)
