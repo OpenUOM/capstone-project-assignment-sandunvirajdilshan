@@ -2,10 +2,7 @@
   "name": "capstone-frontend",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "nohup sh -c 'npm i && npm i && export NODE_ENV=test && (node ../backend/index.js &) && (node_modules/@angular/cli/bin/ng.js serve --port 4401 &) && sleep 10 && testcafe chrome:headless test/dummy.test.js test/student-add.test.js test/student-delete.test.js test/student-edit.test.js test/student-search.test.js test/teacher-add.test.js test/teacher-delete.test.js test/teacher-edit.test.js test/teacher-search.test.js' 2>&1 | tee test_output.log &",
+    "test": "nohup sh -c 'npm i && npm i && export NODE_ENV=test && (node ../backend/index.js &) && (node_modules/@angular/cli/bin/ng.js serve --port 4401 &) && sleep 10 && testcafe chrome:headless test/dummy.test.js test/student-add.test.js test/student-delete.test.js test/student-edit.test.js test/student-search.test.js test/teacher-add.test.js test/teacher-delete.test.js test/teacher-edit.test.js test/teacher-search.test.js' 2>&1 | tee test_output.log & exit",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
